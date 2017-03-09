@@ -1,0 +1,457 @@
+﻿@model FiduciaMVC.Models.ContatoViewModel
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>Fidúcia Consultoria e Assessoria em Alimentos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Fidúcia significa confiança, fazendo jus ao nome, o objetivo da nossa empresa é garantir a segurança e a confiança dos seus clientes." />
+    <link rel="shortcut icon" href="~/favicon.png">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/css/slick.css">
+    <link rel="stylesheet" href="~/Content/js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="~/Content/css/berry.css">
+
+    <script type="text/javascript" src="Content/js/modernizr.custom.32033.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="~/Content/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Content/js/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            if ('@TempData["mensagemEnviada"]' == 'True') {
+                $("#alertSucesso").show();
+            } else {
+                $("#alertSucesso").hide();
+            }
+
+            $("#Email").on("focus", function () {
+                document.getElementById("msgemail").innerHTML = "";
+                $("#btnSubmit").removeClass("disabled");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-70831825-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img class="white img img-circle" src="Content/img/berry/logo.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="fa fa-bars fa-lg"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img id="logoBrand" class="white logo img img-circle" src="Content/img/berry/logo.png" alt="" style="">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="lnkMenu" href="#about">Quem Somos</a>
+                        </li>
+                        <li>
+                            <a class="lnkMenu" href="#features">Serviços Prestados</a>
+                        </li>
+                        <li>
+                            <a class="lnkMenu" href="#support">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-->
+            <div id="alertSucesso" class="modal-dialog alert alert-success" style="display: none;">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Obrigado!</strong> Mensagem enviada com Sucesso.
+            </div>
+        </nav>
+
+        <!--RevSlider-->
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <ul>
+                    <!-- SLIDE -->
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                        <!-- MAIN IMAGE -->
+                        <img src="Content/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption large_white_bold sft" data-x="center" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                            <span style="font-family: parisienne; font-size: 120%;">
+                                Fidúcia
+                            </span>
+                        </div>
+                        <div class="tp-caption large_white_light sfb" data-x="center" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                            <span style="font-family: parisienne; font-size: 100%;">
+                                Consultoria e Assessoria em Alimentos
+                            </span>
+                        </div>
+                    </li>
+                    <!-- SLIDE 2 -->
+                    <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
+                        <!-- MAIN IMAGE -->
+                        <img src="Content/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin customout hidden-xs"
+                             data-x="800"
+                             data-y="center"
+                             data-hoffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-voffset="50"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="Content/img/frutas.jpg" alt="" class="img img-responsive img-rounded" width="200">
+
+                        </div>
+                        <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
+                            <a href="#support" class="btn btn-primary inverse btn-lg">Fale conosco</a>
+                        </div>
+
+                        <!-- Tela grande -->
+                        <div class="tp-caption mediumlarge_light_white sfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1000" data-easing="Power4.easeOut">
+                            Sua Empresa
+                        </div>
+                        <div class="tp-caption mediumlarge_light_white sft hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
+                            De acordo com as normas
+                        </div>
+                        <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="80" data-speed="1000" data-start="1600" data-easing="Power4.easeOut">
+                            <p>
+                                Fidúcia significa confiança, fazendo jus ao nome, <br />o objetivo da nossa empresa é garantir a segurança e a confiança dos seus clientes.
+                            </p>
+                        </div>
+                        <!-- Tela pequena -->
+                        <div class="tp-caption mediumlarge_light_white sfl visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="1000" data-start="1000" data-easing="Power4.easeOut">
+                            <p style="font-size: 16px;">
+                                Sua Empresa de acordo com as normas
+                            </p>
+                        </div>
+                        <div class="tp-caption mediumlarge_light_white sft visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="40" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
+                            <p style="font-size: 12px;">
+                                Fidúcia significa confiança
+                            </p>
+                        </div>
+                        <div class="tp-caption mediumlarge_light_white sft visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="100" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
+                            <p style="font-size: 12px;">
+                                Fazendo jus ao nome, o objetivo da nossa empresa
+                            </p>
+                        </div>
+                        <div class="tp-caption mediumlarge_light_white sft visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
+                            <p style="font-size: 12px;">
+                                é garantir a segurança e a confiança dos seus clientes
+                            </p>
+                        </div>
+                        <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
+                            <a href="#support" class="btn btn-primary inverse btn-lg">Fale conosco</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="wrapper">
+
+        <section id="about">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3" style="margin-bottom: 35px;">
+                    <h1>Quem Somos</h1>
+                    <div class="divider"></div>
+                    <div class="sp-effect1 col-md-12">
+                        <p>Missão</p>
+                        Garantir a segurança dos alimentos produzidos pelos nossos clientes, atendendo às legislações sanitárias vigentes, bem como a qualidade destes alimentos, através de ferramentas de produção e qualidade inovadoras.
+                        <p>Visão</p>
+                        Ser referência na área de consultoria e assessoria em segurança dos alimentos, bem como na área de produção e qualidade dos mesmos, na região metropolitana de Porto Alegre/RS.
+                        <p>Valores</p>
+                        Ética, competência, pontualidade, qualidade, excelência, responsabilidade social e ambiental, respeito aos clientes e parceiros.
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-push-1 scrollpoint sp-effect4">
+                        <div class="">
+                            <div class="review">
+                                <div class="row">
+                                    <br /><br />
+                                    <div class="col-md-2">
+                                        <div class="review-person">
+                                            <img src="Content/img/ludy.jpg" alt="" width="130" height="130" class="img img-circle img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="review-comment">
+                                            <h3 style="margin-top: 0;">
+                                                Ludymila Schulz Barroso
+                                            </h3>
+                                            <p>
+                                                Graduada em Nutrição pela Universidade Federal do Rio Grande do Sul, com formação de Especialista em Segurança de Alimentos pela SGS Academy Brasil. Atua na área de serviços de alimentação há 4 anos, com experiência em restaurantes comerciais e industriais e em rede de escolas públicas.
+                                            </p>
+                                            <p>Nutricionista - CRN2 11474</p>
+                                            <a href="mailto:ludymila.barroso@fiduciaconsultoria.com">ludymila.barroso@fiduciaconsultoria.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </section>
+        <section id="features">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3" style="margin-bottom: 40px !important;">
+                    <h1>Serviços Prestados</h1>
+                    <div class="divider"></div>
+                    <p>O que podemos fazer pela sua empresa</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect1">
+                        <h2 style="text-align: center">Segurança dos alimentos</h2>
+                        <div class="media feature">
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+                            <div class="media-body">
+                                <h3 class="media-heading">Manual de Boas Práticas</h3>
+                                Elaborado conforme legislações vigentes, adequado à realidade do cliente, incluindo Procedimentos Operacionais Padronizados (POP) e planilhas de controle.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Visitas técnicas</h3>
+                                Realizadas por meio de auditorias periódicas, a fim de verificar o cumprimento das legislações vigentes, Manual de Boas Práticas e Procedimentos Operacionais Padronizados.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Seleção de fornecedores</h3>
+                                Conduzida através de auditorias técnicas ao estabelecimento de cada fornecedor, com avaliação das condições higiênico-sanitárias e cumprimento de legislações vigentes.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Análise de Perigos e Pontos Críticos de Controle</h3>
+                                O APPCC analisa os riscos biológicos, físicos e químicos em todas as etapas de produção, estabelecendo medidas de controle e monitoramento para obter um alimento seguro.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Treinamentos</h3>
+                                Aplicação de treinamentos com enfoque em boas práticas, higiene de alimentos, higiene de utensílios, equipamentos e edificações, ambos voltados à rotina diária do estabelecimento, através de atividades práticas para melhor aprendizado e fixação dos colaboradores.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Responsabilidade técnica</h3>
+                                Assinada por nutricionista cadastrada junto ao Conselho Regional de Nutricionistas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 scrollpoint sp-effect2">
+                        <h2 style="text-align: center">Qualidade dos alimentos</h2>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Elaboração de cardápios</h3>
+                                Cardápios produzidos conforme as necessidades do cliente, para públicos específicos ou população em geral.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Fichas técnicas</h3>
+                                Confeccionadas através de verificação e acompanhamento das receitas <i>in loco</i>, com receituário, medida caseira, modo de preparo, para garantir a qualidade sensorial do produto, independente de quem o prepara, e a previsão de custo.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Desenvolvimento de novas receitas</h3>
+                                Criação de novos produtos, a fim de torná-los mais saudáveis ou atender às necessidades de seus clientes.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Informações nutricionais</h3>
+                                Cálculo de nutrientes e micronutrientes, informes nutricionais específicos como, por exemplo, benefícios dos nutrientes e intolerâncias e alergias.
+                            </div>
+                        </div>
+                        <div class="media feature">
+
+                            <i class="pull-left fa fa-cutlery fa-2x"></i>
+
+                            <div class="media-body">
+                                <h3 class="media-heading">Indicadores de satisfação de clientes</h3>
+                                Aplicação de ferramentas para verificar a satisfação de seus clientes e elaboração de plano de ação, a fim de fidelizá-los.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="doublediagonal">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Contato</h1>
+                    <div class="divider"></div>
+                    <p>Fale com a gente! Responderemos o mais breve possível.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
+                                @using (Html.BeginForm("Email", "Home", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(x => x.Nome, new { @class = "form-control", @placeholder = "Seu nome", @required = true })
+                                        @Html.ValidationMessageFor(x => x.Nome)
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @placeholder = "Seu e-mail", @required = true, @onblur = "validacaoEmail(this)" })
+                                        <p id="msgemail"></p>
+                                        @Html.ValidationMessageFor(x => x.Email)
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.TextAreaFor(x => x.Mensagem, new { @cols = "30", @rows = "8", @class = "form-control", @placeholder = "Sua mensagem", @required = true })
+                                        @Html.ValidationMessageFor(x => x.Mensagem)
+                                    </div>
+                                    <button id="btnSubmit" type="submit" class="disabled btn btn-primary btn-lg">Enviar</button>
+                                }
+                            </div>
+                            <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <i class="fa fa-map-marker fa-2x"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Porto Alegre - RS</h4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <i class="fa fa-envelope fa-2x"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="mailto:contato@fiduciaconsultoria.com">contato@fiduciaconsultoria.com</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <i class="fa fa-phone fa-2x"></i>
+                                    </span>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">(51) 9681-0016</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <a href="#" class="scrollpoint sp-effect3">
+                    <img class="white img img-circle" src="Content/img/berry/logo.png" alt="" class="logo">
+                </a>
+                <div class="social">
+                    @*<a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>*@
+                    <a href="https://www.facebook.com/fiduciaconsultoriaemalimentos" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div>
+                <div class="rights">
+                    <p>Copyright &copy; 2016</p>
+                    <p>Desenvolvimento <a href="http://br.linkedin.com/pub/uiliam-elesb%C3%A3o/20/81a/191" target="_blank">Uiliam Elesbão</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/slick.min.js"></script>
+    <script src="Content/js/placeholdem.min.js"></script>
+    <script src="Content/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="Content/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="Content/js/waypoints.min.js"></script>
+    <script src="Content/js/scripts.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            appMaster.preLoader();
+        });
+    </script>
+</body>
+</html>
